@@ -1,0 +1,13 @@
+extends main
+block content
+	div(class="table table-responsive")
+		table
+			thead
+				tr
+					th No
+					th Nama
+			tbody
+				each d in data
+					tr
+						td= d.dept_no
+						td= d.dept_name
