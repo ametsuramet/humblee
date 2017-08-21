@@ -7,7 +7,7 @@ use PHPRouter\Route;
 
 $collection = new RouteCollection();
 $collection->attachRoute(new Route('/users/', array(
-    '_controller' => '\App\Controllers\IndexController::users',
+    '_controller' => '\App\Controllers\SampleController::users',
     'methods' => 'GET'
 )));
 

@@ -6,7 +6,8 @@
         "dannyvankooten/php-router": "^1.2@alpha",
         "slim/pdo": "dev-master",
         "symfony/http-foundation": "3.4.x-dev",
-        "pug-php/pug": "dev-master"
+        "pug-php/pug": "dev-master",
+        "firebase/php-jwt": "dev-master"
     },
     "license": "MIT",
     "authors": [

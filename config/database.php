@@ -2,7 +2,7 @@
 
 $db_config = [
 	'host' => 'localhost',
-	'db_name' => 'employees',
+	'db_name' => 'zaraaya',
 	'username' => 'root',
 	'password' => 'root',
 ];
