@@ -2,17 +2,18 @@
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+require __DIR__.'/loadConfig.php';
 
-
-if (!function_exists('app')) {
-	function app()
-	{
-		require __DIR__.'/../config/database.php';
-		$app = new \stdClass;
-		$app->db_config = json_decode(json_encode($db_config));
-		return $app;
-	}
-}
+// if (!function_exists('app')) {
+// 	function app()
+// 	{
+// 		global $config;
+// 		require __DIR__.'/../config/database.php';
+// 		$app = new \stdClass;
+// 		$app->db_config = json_decode(json_encode($config['database']));
+// 		return $app;
+// 	}
+// }
 
 if (!function_exists('request')) {
 	function request()

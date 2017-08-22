@@ -1,6 +1,6 @@
 <?php
 
-$db_config = [
+return [
 	'host' => 'localhost',
 	'db_name' => 'zaraaya',
 	'username' => 'root',
