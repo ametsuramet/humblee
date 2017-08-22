@@ -127,7 +127,7 @@ class Router
 
             return $routes;
         }
-
+        throw new Exception("No route with the name $requestUrl has been found.");
         return false;
     }
 

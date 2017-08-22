@@ -9,7 +9,8 @@ use Symfony\Component\HttpFoundation\Request;
 class JwtMiddleware extends BaseMiddleware {
 
 	protected $routerParams = [
-		['method' => 'GET', 'uri' => '/users']
+		['method' => 'GET', 'uri' => '/users'],
+		['method' => 'GET', 'uri' => '/users/:id'],
 	];
 
 	protected function handle()
