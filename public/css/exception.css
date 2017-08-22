@@ -1,0 +1,38 @@
+body {
+	font-family: 'Open Sans', sans-serif !important;
+	background: #db340a;
+}
+.logo{
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+}
+.container{
+	background: white;
+	padding-bottom: 30px;
+	position: relative;
+}
+.list-stack{
+	margin-bottom: 30px;
+}
+.line-number{
+	display: inline-block;
+	width: 40px;
+	font-size: 12pt;
+}
+
+.trace ul {
+	list-style-type: none;
+	margin: 10px 10px 10px 40px;
+	padding: 20px;
+	background: #f5f5f5;
+	border-radius: 5px;
+	box-shadow: 3px 3px 2px #dedede;
+	font-family: "courier new", Sans;
+
+}
+.file{
+	font-weight: bold;
+	font-size: 14pt;
+}

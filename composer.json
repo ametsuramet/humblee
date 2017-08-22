@@ -3,11 +3,11 @@
     "description": "simple php framework",
     "type": "framework",
     "require": {
-        "dannyvankooten/php-router": "^1.2@alpha",
         "slim/pdo": "dev-master",
         "symfony/http-foundation": "3.4.x-dev",
         "pug-php/pug": "dev-master",
-        "firebase/php-jwt": "dev-master"
+        "firebase/php-jwt": "dev-master",
+        "fig/http-message-util": "^1.1@dev"
     },
     "license": "MIT",
     "authors": [

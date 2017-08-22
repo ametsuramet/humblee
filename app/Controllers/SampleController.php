@@ -13,7 +13,18 @@ class SampleController extends BaseController{
 
 	public function users()
 	{
-		$data = (new User)->paginate(4);
+		$data = (new User)->paginate(10);
+		$return = [
+			'success' => true,
+			'message' => "Data User Retrieved",
+			'data' => $data,
+		];
+		response($return);
+	}
+
+	public function profile($id)
+	{
+		$data = (new User)->find($id);
 		$return = [
 			'success' => true,
 			'message' => "Data User Retrieved",
