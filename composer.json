@@ -3,6 +3,8 @@
     "description": "simple php framework",
     "type": "framework",
     "require": {
+        "php": ">=5.6.4",
+        "ametsuramet/humblee": "dev-master",
         "slim/pdo": "dev-master",
         "symfony/http-foundation": "3.4.x-dev",
         "pug-php/pug": "dev-master",
