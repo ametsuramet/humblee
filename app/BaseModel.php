@@ -208,19 +208,19 @@ class BaseModel
         }
 
         if (count($this->limit_attributes)) {
-            $db = $db->offset($this->limit_attributes[0])->limit($this->limit_attributes[1]);
+            $db = $db->limit($this->limit_attributes[1],$this->limit_attributes[0]);
         }
 
         if ($this->value_default_key) {
-            $db = $db->where($this->default_key,$this->value_default_key)->limit(1);
+            $db = $db->where($this->default_key,'=',$this->value_default_key)->limit(1);
         }
 
         if ($this->soft_delete) {
             if ($this->show_deleted_only) {
-                    $db = $db->whereNotNull('deleted_at');
+                    $db = $db->where('deleted_at','!=', 'null');
             } else {
                 if (!$this->show_deleted) {
-                    $db = $db->where('deleted_at',null);
+                    $db = $db->where('deleted_at','=',null);
                 }
             }
         }
@@ -242,8 +242,11 @@ class BaseModel
     private function sum_all_data()
     {
         $select_params = [];
+        $db = db();
 
-        $db = db()->from($this->table);
+        
+        $db = $db->select(['count(id) as id']);
+        $db = $db->from($this->table);
         foreach ($this->where_params as $key => $where) {
             $db = $db->where($where[0],$where[1],$where[2]);
         }
@@ -253,11 +256,11 @@ class BaseModel
         }
 
         if (count($this->limit_attributes)) {
-            $db = $db->offset($this->limit_attributes[0])->limit($this->limit_attributes[1]);
+            $db = $db->imit($this->limit_attributes[1],$this->limit_attributes[0]);
         }
 
         if ($this->value_default_key) {
-            $db = $db->where($this->default_key,$this->value_default_key)->limit(1);
+            $db = $db->where($this->default_key,"=",$this->value_default_key)->limit(1);
         }
 
         if ($this->soft_delete) {
@@ -274,11 +277,11 @@ class BaseModel
             $db = $db->groupBy(db()->raw($this->group_attributes));
         }
 
-            $db = $db->select(db()->raw('count(id)'));
+            
 
 
-        $db = array_values((array) $db->first())[0];
-        return $db;
+        $db = $db->execute()->fetch();
+        return current($db);
     }
 
     public function paginate($limit)
@@ -306,10 +309,10 @@ class BaseModel
             'total' => $sum_data,
             "per_page" => $limit,
             "offset" => $offset,
-            "current_page" => $currentPage,
+            "current_page" => (int) $currentPage,
             "last_page" => $last_page,
-            "next_page_url" => $currentPage == $last_page ? null : request()->url()."?page=".$next_page,
-            "prev_page_url" => $currentPage == 1 ? null : request()->url()."?page=".$prev_page,
+            "next_page_url" => $currentPage == $last_page ? null : url()."?page=".$next_page,
+            "prev_page_url" => $currentPage == 1 ? null : url()."?page=".$prev_page,
             "from" => $from,
             "to" => $to,
         ];

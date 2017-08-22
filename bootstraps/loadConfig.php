@@ -4,9 +4,10 @@ $dir_config = __DIR__.'/../config/';
 
 
 $getConfig = [];
-foreach (scandir(realpath($dir_config)) as $key => $file) {
+foreach (scandir(realpath($dir_config)) as $file) {
 	if ($file != ".." && $file != ".") {
-		$getConfig[rtrim($file,'.php')] = include $dir_config.$file;
+		$key = str_replace(".php", "", $file);
+		$getConfig[$key] = include $dir_config.$file;
 	}
 }
 $GLOBALS['config'] = $getConfig;

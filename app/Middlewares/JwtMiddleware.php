@@ -15,32 +15,33 @@ class JwtMiddleware extends BaseMiddleware {
 	protected function handle()
 	{
 		global $config;
-
 		$key = $config['jwt']['key'];
 		$jwt = request()->headers->get('token',null);
 		$request = new Request;
-		try {
-			$decoded = JWT::decode($jwt, $key, array('HS256'));
-			if ($decoded->exp < time()) {
-				throw new \Exception("JWT Token expired");
-			}
-		} catch (\Exception $e) {
-			// print_r($e->getMessage());
-			die($e->getMessage());
+		$decoded = JWT::decode($jwt, $key, array('HS256'));
+		// print_r($decoded);die();
+		if ($decoded->iss != url()) {
+			throw new \Exception("iss not match");
 		}
+		if ($decoded->exp < time()) {
+			throw new \Exception("JWT Token expired");
+		}
+
+		$GLOBALS['authId'] = $decoded->sub;
+		
 	}
 
-	public function generateToken($id)
+	public static function generateToken($id)
 	{
-		require __DIR__.'/../../config/jwt.php';
+		global $config;
 
-		$key = $jwt['key'];
+		$key = $config['jwt']['key'];
 		$token = array(
 		    "sub" => $id,
 		    "iss" => url(),
 		    "aud" => url(),
 		    "iat" => time(),
-		    "exp" => time() + $jwt['expired']
+		    "exp" => time() + $config['jwt']['expired']
 		);
 		$jwt = JWT::encode($token, $key);
 		return $jwt;

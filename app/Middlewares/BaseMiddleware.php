@@ -15,7 +15,7 @@ class BaseMiddleware {
             if ($method->name != "__construct" && $method->class == $class_name) {
                 foreach ($this->routerParams as $key => $routerParams) {
                 	if ($routerParams['method'] == request()->server->get('REQUEST_METHOD') && 
-                		$routerParams['uri'] == request()->server->get('REQUEST_URI')) {
+                		$routerParams['uri'] == request()->server->get('PATH_INFO')) {
                 		call_user_func(array($this, 'handle'));
                 	}
                 }
