@@ -12,7 +12,7 @@ composer create-project --prefer-dist ametsuramet/humblee:dev-master name_projec
 php -S localhost:8000 -t public
 ```
 
-## START SERVER
+## CREDITS
 * [PHP Router class](https://github.com/dannyvankooten/PHP-Router)
 * [Slim-PDO](https://github.com/FaaPz/Slim-PDO)
 * [HttpFoundation Component](https://github.com/symfony/http-foundation)
