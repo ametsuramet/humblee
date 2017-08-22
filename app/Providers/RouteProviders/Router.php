@@ -127,8 +127,10 @@ class Router
 
             return $routes;
         }
-        throw new Exception("No route with the name $requestUrl has been found.");
-        return false;
+        // throw new Exception("No route with the name $requestUrl has been found.");
+        $message = "No route with the name $requestUrl has been found.";
+        return view_exception('404',compact('message'));
+        // return false;
     }
 
     /**
