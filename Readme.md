@@ -12,6 +12,9 @@ composer create-project --prefer-dist ametsuramet/humblee:dev-master name_projec
 php -S localhost:8000 -t public
 ```
 
+## Documentation 
+Please check our documentation => [click here](https://github.com/ametsuramet/humblee/wiki)
+
 ## CREDITS
 * [Slim-PDO](https://github.com/FaaPz/Slim-PDO)
 * [HttpFoundation Component](https://github.com/symfony/http-foundation)
