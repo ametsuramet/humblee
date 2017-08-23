@@ -27,4 +27,30 @@ class AuthController extends BaseController{
 		
 	}
 
+	public function login()
+	{
+		$flash = flash('message');
+		$message = $flash ? $flash['message'] : null;
+		$email = $flash ? $flash['old']['email'] : null;
+		
+		view('login',compact('message','email'));
+	}
+
+	public function postLogin()
+	{
+		try {
+			$request = request()->request->all();
+			$auth = new Auth;
+			$auth->Attempt($request);
+		} catch (\Exception $e) {
+			backWithInput($e->getMessage(),$request);
+		}
+	}
+
+	public function logout()
+	{
+		// echo "string";die();
+		kill_session();
+	}
+
 }

@@ -16,9 +16,20 @@ $collection->attachRoute(new Route('/api/login', array(
     'methods' => 'POST'
 )));
 
-$collection->attachRoute(new Route('/users/:id', array(
-    '_controller' => '\App\Controllers\SampleController::profile',
-    'methods' => 'GET',
+
+$collection->attachRoute(new Route('/login', array(
+    '_controller' => '\App\Controllers\AuthController::login',
+    'methods' => 'GET'
+)));
+
+$collection->attachRoute(new Route('/login', array(
+    '_controller' => '\App\Controllers\AuthController::postLogin',
+    'methods' => 'POST'
+)));
+
+$collection->attachRoute(new Route('/logout', array(
+    '_controller' => '\App\Controllers\AuthController::logout',
+    'methods' => 'GET'
 )));
 
 $collection->attachRoute(new Route('/', array(
@@ -26,10 +37,6 @@ $collection->attachRoute(new Route('/', array(
     'methods' => 'GET'
 )));
 
-$collection->attachRoute(new Route('/employee', array(
-    '_controller' => '\App\Controllers\SampleController::employee',
-    'methods' => 'GET'
-)));
 
 $router = new Router($collection);
 $router->setBasePath('/');
