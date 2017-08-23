@@ -4,7 +4,7 @@ namespace App\Middlewares;
 
 use \Firebase\JWT\JWT;
 use Symfony\Component\HttpFoundation\Request;
-
+use Amet\Humblee\Bases\BaseMiddleware;
 
 class JwtMiddleware extends BaseMiddleware {
 

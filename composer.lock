@@ -4,8 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "443958088774b3b3b495d5da9d7266e6",
+    "content-hash": "b5c6db537bd7eef01eb106a546ae13f6",
     "packages": [
+        {
+            "name": "ametsuramet/humblee-framework",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ametsuramet/humblee-framework.git",
+                "reference": "a9046a4008622d761ae700c2d131e89925f53f61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/a9046a4008622d761ae700c2d131e89925f53f61",
+                "reference": "a9046a4008622d761ae700c2d131e89925f53f61",
+                "shasum": ""
+            },
+            "require": {
+                "fig/http-message-util": "^1.1@dev",
+                "firebase/php-jwt": "dev-master",
+                "php": ">=5.6.4",
+                "pug-php/pug": "dev-master",
+                "slim/pdo": "dev-master",
+                "symfony/http-foundation": "3.4.x-dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amet\\Humblee\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "amet suramet",
+                    "email": "ametsuramet@gmail.com"
+                }
+            ],
+            "description": "Humblee Framework",
+            "time": "2017-08-23 03:51:46"
+        },
         {
             "name": "fig/http-message-util",
             "version": "dev-master",
@@ -453,12 +494,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "b7e34ba2eb4d0ac9eb0c2d46b20d9136fde5fa66"
+                "reference": "9cc8019b5d013f3b0dda7f1ba5596677229562b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b7e34ba2eb4d0ac9eb0c2d46b20d9136fde5fa66",
-                "reference": "b7e34ba2eb4d0ac9eb0c2d46b20d9136fde5fa66",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/9cc8019b5d013f3b0dda7f1ba5596677229562b9",
+                "reference": "9cc8019b5d013f3b0dda7f1ba5596677229562b9",
                 "shasum": ""
             },
             "require": {
@@ -498,7 +539,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-10 07:07:17"
+            "time": "2017-08-22 20:48:27"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -568,10 +609,13 @@
         "symfony/http-foundation": 20,
         "pug-php/pug": 20,
         "firebase/php-jwt": 20,
-        "fig/http-message-util": 20
+        "fig/http-message-util": 20,
+        "ametsuramet/humblee-framework": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.6.4"
+    },
     "platform-dev": []
 }

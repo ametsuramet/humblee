@@ -1,9 +1,9 @@
 <?php
 
 
-use App\Providers\RouteProviders\RouteCollection;
-use App\Providers\RouteProviders\Router;
-use App\Providers\RouteProviders\Route;
+use Amet\Humblee\Providers\RouterProviders\RouteCollection;
+use Amet\Humblee\Providers\RouterProviders\Router;
+use Amet\Humblee\Providers\RouterProviders\Route;
 
 $collection = new RouteCollection();
 $collection->attachRoute(new Route('/users/', array(
@@ -18,6 +18,11 @@ $collection->attachRoute(new Route('/users/:id', array(
 
 $collection->attachRoute(new Route('/', array(
     '_controller' => '\App\Controllers\SampleController::index',
+    'methods' => 'GET'
+)));
+
+$collection->attachRoute(new Route('/employee', array(
+    '_controller' => '\App\Controllers\SampleController::employee',
     'methods' => 'GET'
 )));
 
