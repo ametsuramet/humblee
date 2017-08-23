@@ -38,6 +38,12 @@ $collection->attachRoute(new Route('/', array(
 )));
 
 
+$collection->attachRoute(new Route('/auth-user', array(
+    '_controller' => '\App\Controllers\SampleController::auth_user',
+    'methods' => 'GET'
+)));
+
+
 $router = new Router($collection);
 $router->setBasePath('/');
 $route = $router->matchCurrentRequest();

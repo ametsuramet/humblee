@@ -6,7 +6,7 @@ use Amet\Humblee\Bases\BaseMiddleware;
 class AuthMiddleware extends BaseMiddleware {
 
 	protected $routerParams = [
-		['method' => 'GET', 'uri' => ''],
+		['method' => 'GET', 'uri' => '/auth-user'],
 	];
 
 	protected function handle()

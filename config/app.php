@@ -1,8 +1,8 @@
 <?php
 
 return [
-	'APP_ENV' => 'local',
+	'APP_ENV' => 'development',
 	'APP_DEBUG' => true,
 	'guest_redirect' => "/login",
-	'redirect' => "/",
+	'redirect' => "/auth-user",
 ];
