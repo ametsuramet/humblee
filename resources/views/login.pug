@@ -8,7 +8,7 @@ block content
         h1.greeting2 Humblee
         h1.display-4.m-b-2 Log In
         if message
-        	pre= message
+        	include alert
         form(method='POST' action='/login')
           div.form-group
             label(for='email') Email
