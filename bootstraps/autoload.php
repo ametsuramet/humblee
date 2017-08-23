@@ -60,7 +60,7 @@ try {
 		{
 			$pug    = new Pug\Pug();
 	        $vars   = $data ?: array();
-	        $output = $pug->render(__DIR__ . '/../resources/exceptions/' . $path . $pug->getExtension(), $vars);
+	        $output = $pug->render(__DIR__ . '/../vendor/ametsuramet/humblee-framework/src/resources/exceptions/' . $path . $pug->getExtension(), $vars);
 	        echo $output;
 		}
 	}

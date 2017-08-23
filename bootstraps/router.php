@@ -7,8 +7,13 @@ use Amet\Humblee\Providers\RouterProviders\Route;
 
 $collection = new RouteCollection();
 $collection->attachRoute(new Route('/users/', array(
-    '_controller' => '\App\Controllers\SampleController::users',
+    '_controller' => '\App\Controllers\UserController::index',
     'methods' => 'GET'
+)));
+
+$collection->attachRoute(new Route('/api/login', array(
+    '_controller' => '\App\Controllers\AuthController::login_api',
+    'methods' => 'POST'
 )));
 
 $collection->attachRoute(new Route('/users/:id', array(

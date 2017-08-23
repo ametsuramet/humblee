@@ -8,9 +8,6 @@ class BaseController {
 		$GLOBALS['executionStartTime'] = microtime(true);
 	}	
 
-	function __destruct()
-	{
-		$GLOBALS['executionEndTime'] = microtime(true);
-	}
+	
 
 }

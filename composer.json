@@ -9,7 +9,8 @@
         "pug-php/pug": "dev-master",
         "firebase/php-jwt": "dev-master",
         "fig/http-message-util": "^1.1@dev",
-        "ametsuramet/humblee-framework": "dev-master"
+        "ametsuramet/humblee-framework": "dev-master",
+        "illuminate/hashing": "^5.5@dev"
     },
     "license": "MIT",
     "authors": [
