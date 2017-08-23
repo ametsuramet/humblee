@@ -4,13 +4,7 @@
     "type": "framework",
     "require": {
         "php": ">=5.6.4",
-        "slim/pdo": "dev-master",
-        "symfony/http-foundation": "3.4.x-dev",
-        "pug-php/pug": "dev-master",
-        "firebase/php-jwt": "dev-master",
-        "fig/http-message-util": "^1.1@dev",
         "ametsuramet/humblee-framework": "dev-master",
-        "illuminate/hashing": "^5.5@dev"
     },
     "license": "MIT",
     "authors": [
