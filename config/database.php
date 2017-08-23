@@ -16,11 +16,11 @@ return array(
     'db' => array(
         'development' => array(
             'type' => 'mysql',
-            'host' => 'localhost',
-            'port' => 3306,
-            'database' => 'zaraaya',
-            'user' => 'root',
-            'password' => 'root',
+            'host' => getenv('DB_HOST','localhost'),
+            'port' => getenv('DB_PORT',3306),
+            'database' => getenv('DB_DATABASE',null),
+            'user' => getenv('DB_USERNAME','root'),
+            'password' => getenv('DB_PASSWORD','root'),
             //'charset' => 'utf8',
             //'directory' => 'custom_name',
             //'socket' => '/var/run/mysqld/mysqld.sock'

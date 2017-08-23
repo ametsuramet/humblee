@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ametsuramet/humblee-framework.git",
-                "reference": "aca9607b4adb8834f11af56920f6d3494246371c"
+                "reference": "f7632aec1ad86b1c4accc5ad98238f97a45cefab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/aca9607b4adb8834f11af56920f6d3494246371c",
-                "reference": "aca9607b4adb8834f11af56920f6d3494246371c",
+                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/f7632aec1ad86b1c4accc5ad98238f97a45cefab",
+                "reference": "f7632aec1ad86b1c4accc5ad98238f97a45cefab",
                 "shasum": ""
             },
             "require": {
@@ -29,7 +29,8 @@
                 "php": ">=5.6.4",
                 "pug-php/pug": "dev-master",
                 "slim/pdo": "dev-master",
-                "symfony/http-foundation": "3.4.x-dev"
+                "symfony/http-foundation": "3.4.x-dev",
+                "vlucas/phpdotenv": "^2.4@dev"
             },
             "type": "library",
             "autoload": {
@@ -48,7 +49,7 @@
                 }
             ],
             "description": "Humblee Framework",
-            "time": "2017-08-23 11:08:44"
+            "time": "2017-08-23 11:42:59"
         },
         {
             "name": "aura/session",
@@ -1131,6 +1132,56 @@
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
             "time": "2017-08-22 21:55:52"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "3dd3d8f90e6604e75cca48ec32b033b50b05135b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3dd3d8f90e6604e75cca48ec32b033b50b05135b",
+                "reference": "3dd3d8f90e6604e75cca48ec32b033b50b05135b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause-Attribution"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2017-08-08 20:02:34"
         }
     ],
     "packages-dev": [],
