@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a3f2dc9deeec94ee24b63945db28682",
+    "content-hash": "968170ed0d77c4bf5441585ad39d0f7c",
     "packages": [
         {
             "name": "ametsuramet/humblee-framework",
@@ -12,17 +12,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ametsuramet/humblee-framework.git",
-                "reference": "a9046a4008622d761ae700c2d131e89925f53f61"
+                "reference": "0539f1d4d8ee6a5ad6f084b4fbd20a269f4e994a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/a9046a4008622d761ae700c2d131e89925f53f61",
-                "reference": "a9046a4008622d761ae700c2d131e89925f53f61",
+                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/0539f1d4d8ee6a5ad6f084b4fbd20a269f4e994a",
+                "reference": "0539f1d4d8ee6a5ad6f084b4fbd20a269f4e994a",
                 "shasum": ""
             },
             "require": {
                 "fig/http-message-util": "^1.1@dev",
                 "firebase/php-jwt": "dev-master",
+                "illuminate/hashing": "^5.5@dev",
                 "php": ">=5.6.4",
                 "pug-php/pug": "dev-master",
                 "slim/pdo": "dev-master",
@@ -45,7 +46,7 @@
                 }
             ],
             "description": "Humblee Framework",
-            "time": "2017-08-23 03:51:46"
+            "time": "2017-08-23 05:19:41"
         },
         {
             "name": "doctrine/inflector",
@@ -1034,13 +1035,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "slim/pdo": 20,
-        "symfony/http-foundation": 20,
-        "pug-php/pug": 20,
-        "firebase/php-jwt": 20,
-        "fig/http-message-util": 20,
-        "ametsuramet/humblee-framework": 20,
-        "illuminate/hashing": 20
+        "ametsuramet/humblee-framework": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
