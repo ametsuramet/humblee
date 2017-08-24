@@ -9,6 +9,7 @@ class SampleController extends BaseController{
 	{
 		global $executionStartTime; 
 		$message = "Hello Suprb-Dev";
+		
 		return view('sample',compact('message'));
 	}	
 

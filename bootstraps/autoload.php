@@ -9,7 +9,6 @@ try {
 	require __DIR__.'/functions.php';
 	require __DIR__.'/database.php';
 	require __DIR__.'/middleware.php';
-	// require __DIR__.'/router.php';
 	new Amet\Humblee\Bases\BaseRouter;
 
 } catch (\Exception $e) {
@@ -20,6 +19,6 @@ try {
 		$message = $e->getMessage();
 		return view_exception('exception',compact('message','traces'));
 	} else {
-		echo "something wrong";
+		return view_exception('something',[]);
 	}
 }
