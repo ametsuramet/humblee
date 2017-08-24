@@ -13,12 +13,15 @@ try {
 
 } catch (\Exception $e) {
 	global $config;
-	if ($config['app']['APP_ENV'] != "production" && $config['app']['APP_DEBUG']) {
-
+	if ($config['app']['APP_ENV'] != "production" && $config['app']['APP_DEBUG'] != "false") {
 		$traces = $e->getTrace();
 		$message = $e->getMessage();
 		return view_exception('exception',compact('message','traces'));
-	} else {
-		return view_exception('something',[]);
+	} 
+	if ($config['app']['APP_DEBUG'] == "false") {
+		$traces = [];
+		$message = $e->getMessage();
+		return view_exception('exception',compact('message','traces'));
 	}
+	return view_exception('something',[]);
 }

@@ -2,6 +2,9 @@ body {
 	font-family: 'Open Sans', sans-serif !important;
 	background: #db340a;
 }
+.exception-container{
+	min-height: 600px;
+}
 .logo{
 	position: absolute;
     top: 10px;

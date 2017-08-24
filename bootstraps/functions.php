@@ -100,8 +100,12 @@ use \Firebase\JWT\JWT;
 	if (!function_exists('view')) {
 		function view($path, $data)
 		{
+			$session_factory = new \Aura\Session\SessionFactory;
+			$session = $session_factory->newInstance($_COOKIE);
+			$csrf_value = $session->getCsrfToken()->getValue();
 			$pug    = new Pug\Pug();
 	        $vars   = $data ?: array();
+	        $vars["csrf_token"] = $csrf_value;
 	        $output = $pug->render(__DIR__ . '/../resources/views/' . $path . $pug->getExtension(), $vars);
 	        echo $output;
 		}

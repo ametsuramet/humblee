@@ -1,5 +1,6 @@
 <?php
 
-$jwt = new \App\Middlewares\JwtMiddleware;
-$auth = new \App\Middlewares\RedirectGuestMiddleware;
-$auth = new \App\Middlewares\AuthMiddleware;
+new \App\Middlewares\JwtMiddleware;
+new \App\Middlewares\RedirectGuestMiddleware;
+new \App\Middlewares\AuthMiddleware;
+new \App\Middlewares\VerifyCsrfToken;

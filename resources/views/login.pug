@@ -10,6 +10,7 @@ block content
         if message
         	include alert
         form(method='POST' action='/login')
+          input(type="hidden" value="#{csrf_token}" name="_token")
           div.form-group
             label(for='email') Email
             input.form-control(type='email' id='email' placeholder='email' name='email' value='#{email}')
