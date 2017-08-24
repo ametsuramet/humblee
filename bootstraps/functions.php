@@ -116,6 +116,11 @@ use \Firebase\JWT\JWT;
 	        echo $output;
 		}
 	}
+	if (!function_exists('base_path')) {
+		function base_path($params = null){
+			return realpath(__DIR__.'/../'.$params);
+		}
+	}
 	if (!function_exists('url')) {
 		function url($params = null){
 			$pageURL = "";

@@ -9,7 +9,8 @@ try {
 	require __DIR__.'/functions.php';
 	require __DIR__.'/database.php';
 	require __DIR__.'/middleware.php';
-	require __DIR__.'/router.php';
+	// require __DIR__.'/router.php';
+	new Amet\Humblee\Bases\BaseRouter;
 
 } catch (\Exception $e) {
 	global $config;
