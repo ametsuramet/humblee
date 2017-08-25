@@ -10,3 +10,18 @@ if (!function_exists('db')) {
 		return new \Slim\PDO\Database($dsn, $usr, $pwd);
 	}
 }
+
+if (!function_exists('mongo')) {
+	function mongo()
+	{
+		global $config;
+		// print_r($config['mongo']);
+		$db_config = $config['mongo']['db'][$config['app']['APP_ENV']];
+		$config_str = "";
+		if ($db_config['user'] && $db_config['password']) {
+			$config_str .= "mongodb://".$db_config['user'].":".$db_config['password']."@".$db_config['host'].":".$db_config['port'];
+			return new MongoDB\Client($db_config);
+		}
+		return new MongoDB\Client();
+	}
+}

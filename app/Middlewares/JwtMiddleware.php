@@ -9,7 +9,7 @@ use Amet\Humblee\Bases\BaseMiddleware;
 class JwtMiddleware extends BaseMiddleware {
 
 	protected $routerParams = [
-		['method' => 'GET', 'uri' => '/users'],
+		['method' => 'GET', 'uri' => '/users/id'],
 		['method' => 'GET', 'uri' => '/users/:id'],
 	];
 

@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ametsuramet/humblee-framework.git",
-                "reference": "f7632aec1ad86b1c4accc5ad98238f97a45cefab"
+                "reference": "713e6cc9cfe12a913890db1f5c6ece44730d8c1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/f7632aec1ad86b1c4accc5ad98238f97a45cefab",
-                "reference": "f7632aec1ad86b1c4accc5ad98238f97a45cefab",
+                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/713e6cc9cfe12a913890db1f5c6ece44730d8c1d",
+                "reference": "713e6cc9cfe12a913890db1f5c6ece44730d8c1d",
                 "shasum": ""
             },
             "require": {
@@ -26,6 +26,7 @@
                 "fig/http-message-util": "^1.1@dev",
                 "firebase/php-jwt": "dev-master",
                 "illuminate/hashing": "^5.5@dev",
+                "mongodb/mongodb": "^1.2@dev",
                 "php": ">=5.6.4",
                 "pug-php/pug": "dev-master",
                 "slim/pdo": "dev-master",
@@ -49,7 +50,7 @@
                 }
             ],
             "description": "Humblee Framework",
-            "time": "2017-08-23 11:42:59"
+            "time": "2017-08-25 00:04:11"
         },
         {
             "name": "aura/session",
@@ -320,12 +321,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "0e0bcd13f5268ee1d78ac6a60e477590f1738678"
+                "reference": "1c82af4f00688ba656b0f9d97de2eae75c41788c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/0e0bcd13f5268ee1d78ac6a60e477590f1738678",
-                "reference": "0e0bcd13f5268ee1d78ac6a60e477590f1738678",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/1c82af4f00688ba656b0f9d97de2eae75c41788c",
+                "reference": "1c82af4f00688ba656b0f9d97de2eae75c41788c",
                 "shasum": ""
             },
             "require": {
@@ -356,7 +357,7 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2017-08-16 15:45:58"
+            "time": "2017-08-24 19:24:45"
         },
         {
             "name": "illuminate/hashing",
@@ -408,12 +409,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "a27605f82520ef85ab090525fdeebbdacba9363e"
+                "reference": "b0a5ff19a268454b69298717c664ded70a74efed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/a27605f82520ef85ab090525fdeebbdacba9363e",
-                "reference": "a27605f82520ef85ab090525fdeebbdacba9363e",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/b0a5ff19a268454b69298717c664ded70a74efed",
+                "reference": "b0a5ff19a268454b69298717c664ded70a74efed",
                 "shasum": ""
             },
             "require": {
@@ -457,7 +458,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2017-08-18 18:24:36"
+            "time": "2017-08-24 17:15:05"
         },
         {
             "name": "js-phpize/js-phpize",
@@ -498,6 +499,69 @@
             ],
             "description": "Convert js-like syntax to standalone PHP code.",
             "time": "2017-07-22T22:45:44+00:00"
+        },
+        {
+            "name": "mongodb/mongodb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mongodb/mongo-php-library.git",
+                "reference": "e08edde88572aef747749ba40088b95eee2ac6a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/e08edde88572aef747749ba40088b95eee2ac6a9",
+                "reference": "e08edde88572aef747749ba40088b95eee2ac6a9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mongodb": "^1.2.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MongoDB\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                },
+                {
+                    "name": "Hannes Magnusson",
+                    "email": "bjori@mongodb.com"
+                },
+                {
+                    "name": "Derick Rethans",
+                    "email": "github@derickrethans.nl"
+                }
+            ],
+            "description": "MongoDB driver library",
+            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
+            "keywords": [
+                "database",
+                "driver",
+                "mongodb",
+                "persistence"
+            ],
+            "time": "2017-08-17 18:04:21"
         },
         {
             "name": "nesbot/carbon",
@@ -1072,12 +1136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "d40001c5183b66bf98866369e67c98aa280211ac"
+                "reference": "bfa0d12066ac2339dae3bb0ade63ed38f2a93586"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/d40001c5183b66bf98866369e67c98aa280211ac",
-                "reference": "d40001c5183b66bf98866369e67c98aa280211ac",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/bfa0d12066ac2339dae3bb0ade63ed38f2a93586",
+                "reference": "bfa0d12066ac2339dae3bb0ade63ed38f2a93586",
                 "shasum": ""
             },
             "require": {
@@ -1131,7 +1195,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-22 21:55:52"
+            "time": "2017-08-24 21:10:36"
         },
         {
             "name": "vlucas/phpdotenv",

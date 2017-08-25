@@ -12,6 +12,11 @@ $WebCollection = [
 		'methods' => 'GET',
 	],
 	[
+		'url' => '/employee',
+		'_controller' => 'UserController::employee',
+		'methods' => 'GET',
+	],
+	[
 		'url' => '/api/login',
 		'_controller' => 'AuthController::login_api',
 		'methods' => 'POST',

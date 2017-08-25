@@ -88,6 +88,7 @@ use \Firebase\JWT\JWT;
 	if (!function_exists('response')) {
 		function response($data, $status = Response::HTTP_OK, $headers = ['content-type' => 'text/json'])
 		{
+			ini_set('memory_limit', '-1'); 
 			$res =  new Response(
 			    $headers['content-type'] == 'text/json' ? json_encode($data) : $data,
 			    $status,
