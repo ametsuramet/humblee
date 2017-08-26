@@ -1,0 +1,24 @@
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/bootstraps/console.php';
+
+// print_r($_SERVER);
+// print_r($argv);
+$registerCommands = [
+	'sendmail' => "Sendmail",
+];
+if (!isset($argv[1])) {
+	echo "command unregistered\n";
+	exit;
+}
+
+if (!isset($registerCommands[$argv[1]])) {
+	echo $argv[1]." command unregistered\n";
+	exit;
+}
+
+// print_r( array_slice($argv, 2) );
+$run = "\App\Commands\\".$registerCommands[$argv[1]];
+new $run(array_slice($argv, 2));
+exit;

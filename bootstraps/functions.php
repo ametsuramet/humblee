@@ -140,6 +140,10 @@ use \Firebase\JWT\JWT;
 	if (!function_exists('url')) {
 		function url($params = null){
 			$pageURL = "";
+			global $config;
+			if (!isset($_SERVER["SERVER_PORT"])) {
+				return $config['app']['APP_URL'].$params;
+			}
 			if ($_SERVER["SERVER_PORT"] != "80") {
 			  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$params;
 			} else {
