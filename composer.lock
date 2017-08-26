@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ametsuramet/humblee-framework.git",
-                "reference": "5885566c2df2f244f33931bcf673fd1880c729ca"
+                "reference": "687d85f1374ba6149519519673773020ae17789a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/5885566c2df2f244f33931bcf673fd1880c729ca",
-                "reference": "5885566c2df2f244f33931bcf673fd1880c729ca",
+                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/687d85f1374ba6149519519673773020ae17789a",
+                "reference": "687d85f1374ba6149519519673773020ae17789a",
                 "shasum": ""
             },
             "require": {
@@ -32,6 +32,7 @@
                 "php": ">=5.6.4",
                 "pug-php/pug": "dev-master",
                 "slim/pdo": "dev-master",
+                "swiftmailer/swiftmailer": "^6.0",
                 "symfony/http-foundation": "3.4.x-dev",
                 "vlucas/phpdotenv": "^2.4@dev"
             },
@@ -52,7 +53,7 @@
                 }
             ],
             "description": "Humblee Framework",
-            "time": "2017-08-25 21:09:08"
+            "time": "2017-08-26 10:27:01"
         },
         {
             "name": "aura/session",
@@ -302,6 +303,117 @@
                 "string"
             ],
             "time": "2017-07-22 12:18:28"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "cc709ba91eee09540091ad5a5f2616727662e41b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/cc709ba91eee09540091ad5a5f2616727662e41b",
+                "reference": "cc709ba91eee09540091ad5a5f2616727662e41b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "lexer",
+                "parser"
+            ],
+            "time": "2017-07-24 09:37:08"
+        },
+        {
+            "name": "egulias/email-validator",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egulias/EmailValidator.git",
+                "reference": "bc31baa11ea2883e017f0a10d9722ef9d50eac1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/bc31baa11ea2883e017f0a10d9722ef9d50eac1c",
+                "reference": "bc31baa11ea2883e017f0a10d9722ef9d50eac1c",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "^1.0.1",
+                "php": ">= 5.5"
+            },
+            "require-dev": {
+                "dominicsayers/isemail": "dev-master",
+                "phpunit/phpunit": "^4.8.0",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "suggest": {
+                "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Egulias\\EmailValidator\\": "EmailValidator"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eduardo Gulias Davis"
+                }
+            ],
+            "description": "A library for validating emails against several RFCs",
+            "homepage": "https://github.com/egulias/EmailValidator",
+            "keywords": [
+                "email",
+                "emailvalidation",
+                "emailvalidator",
+                "validation",
+                "validator"
+            ],
+            "time": "2017-01-30T22:07:36+00:00"
         },
         {
             "name": "fig/http-message-util",
@@ -590,12 +702,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "e08edde88572aef747749ba40088b95eee2ac6a9"
+                "reference": "41857f99145772a87131711d79ce58618df58d73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/e08edde88572aef747749ba40088b95eee2ac6a9",
-                "reference": "e08edde88572aef747749ba40088b95eee2ac6a9",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/41857f99145772a87131711d79ce58618df58d73",
+                "reference": "41857f99145772a87131711d79ce58618df58d73",
                 "shasum": ""
             },
             "require": {
@@ -645,7 +757,7 @@
                 "mongodb",
                 "persistence"
             ],
-            "time": "2017-08-17 18:04:21"
+            "time": "2017-08-25 21:28:08"
         },
         {
             "name": "monolog/monolog",
@@ -1227,6 +1339,61 @@
                 "slim"
             ],
             "time": "2017-08-15 10:42:44"
+        },
+        {
+            "name": "swiftmailer/swiftmailer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "bd3da52d22c6abfc808c2f9c56aca652e66d9e9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/bd3da52d22c6abfc808c2f9c56aca652e66d9e9a",
+                "reference": "bd3da52d22c6abfc808c2f9c56aca652e66d9e9a",
+                "shasum": ""
+            },
+            "require": {
+                "egulias/email-validator": "~2.0",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1",
+                "symfony/phpunit-bridge": "~3.3@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Corbyn"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.symfony.com",
+            "keywords": [
+                "email",
+                "mail",
+                "mailer"
+            ],
+            "time": "2017-08-22 22:08:15"
         },
         {
             "name": "symfony/http-foundation",

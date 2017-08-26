@@ -17,8 +17,19 @@ if (!isset($registerCommands[$argv[1]])) {
 	echo $argv[1]." command unregistered\n";
 	exit;
 }
-
+function arguments($argv) {
+    $_ARG = array();
+    foreach ($argv as $arg) {
+      if (preg_match('/--([^=]+)=(.*)/',$arg,$reg)) {
+        $_ARG[$reg[1]] = $reg[2];
+      } elseif(preg_match('/-([a-zA-Z0-9])/',$arg,$reg)) {
+            $_ARG[$reg[1]] = 'true';
+        }
+   
+    }
+  return $_ARG;
+}
 // print_r( array_slice($argv, 2) );
 $run = "\App\Commands\\".$registerCommands[$argv[1]];
-new $run(array_slice($argv, 2));
-exit;
+new $run(arguments($argv));
+exit(0);
