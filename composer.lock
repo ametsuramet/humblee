@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ametsuramet/humblee-framework.git",
-                "reference": "687d85f1374ba6149519519673773020ae17789a"
+                "reference": "436979e53c37bb95f4fcdecfda90253156623878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/687d85f1374ba6149519519673773020ae17789a",
-                "reference": "687d85f1374ba6149519519673773020ae17789a",
+                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/436979e53c37bb95f4fcdecfda90253156623878",
+                "reference": "436979e53c37bb95f4fcdecfda90253156623878",
                 "shasum": ""
             },
             "require": {
@@ -30,6 +30,7 @@
                 "mongodb/mongodb": "^1.2@dev",
                 "monolog/monolog": "^2.0@dev",
                 "php": ">=5.6.4",
+                "pmeth/php_repl": "dev-master",
                 "pug-php/pug": "dev-master",
                 "slim/pdo": "dev-master",
                 "swiftmailer/swiftmailer": "^6.0",
@@ -53,7 +54,7 @@
                 }
             ],
             "description": "Humblee Framework",
-            "time": "2017-08-26 10:27:01"
+            "time": "2017-08-26 12:07:03"
         },
         {
             "name": "aura/session",
@@ -935,6 +936,47 @@
             ],
             "description": "Allow you to call node.js module or scripts throught PHP and call a fallback function if node.js is not available",
             "time": "2017-07-25T11:53:15+00:00"
+        },
+        {
+            "name": "pmeth/php_repl",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmeth/php_repl.git",
+                "reference": "2785ddbe65a854e419cec2d15a27bfe426f6b65e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmeth/php_repl/zipball/2785ddbe65a854e419cec2d15a27bfe426f6b65e",
+                "reference": "2785ddbe65a854e419cec2d15a27bfe426f6b65e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PHPRepl": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ian Eure",
+                    "email": "ieure@php.net",
+                    "role": "Lead"
+                },
+                {
+                    "name": "Peter Meth",
+                    "homepage": "http://softersoftware.com"
+                }
+            ],
+            "description": "A command line REPL (Read-Evaluate-Print-Loop) for PHP written in PHP.",
+            "time": "2014-02-14 14:04:59"
         },
         {
             "name": "psr/container",
