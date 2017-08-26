@@ -123,7 +123,18 @@ use \Firebase\JWT\JWT;
 	}
 	if (!function_exists('base_path')) {
 		function base_path($params = null){
-			return realpath(__DIR__.'/../'.$params);
+			return realpath(__DIR__.'/../').DIRECTORY_SEPARATOR.$params;
+		}
+	}
+	if (!function_exists('storage_path')) {
+		function storage_path($params = null){
+			return realpath(__DIR__.'/../storage/').DIRECTORY_SEPARATOR.$params;
+		}
+	}
+
+	if (!function_exists('writelog')) {
+		function writelog($message,$level = "info"){
+			new Amet\Humblee\Bases\BaseLogs($message,$level);
 		}
 	}
 	if (!function_exists('url')) {
@@ -149,6 +160,11 @@ use \Firebase\JWT\JWT;
 			$session->clear();
 			$session->destroy();
 			header('Location: '.url().$config['app']["guest_redirect"]);
+		}
+	}
+	if (!function_exists('collection')) {
+		function collection($data){
+			return new \Amet\Humblee\Bases\ArrayCollection($data);
 		}
 	}
 

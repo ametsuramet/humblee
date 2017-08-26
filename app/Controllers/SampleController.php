@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use App\Models\User;
 use App\Models\Employee;
+use Amet\Humblee\Bases\ArrayCollection as Collection;
 
 class SampleController extends BaseController{
 
@@ -9,7 +10,6 @@ class SampleController extends BaseController{
 	{
 		global $executionStartTime; 
 		$message = "Hello Suprb-Dev";
-		
 		return view('sample',compact('message'));
 	}	
 

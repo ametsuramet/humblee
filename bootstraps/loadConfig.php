@@ -11,3 +11,5 @@ foreach (scandir(realpath($dir_config)) as $file) {
 	}
 }
 $GLOBALS['config'] = $getConfig;
+
+date_default_timezone_set($GLOBALS['config']['app']['timezone']);

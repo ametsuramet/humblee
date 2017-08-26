@@ -1,14 +1,13 @@
 <?php
-
 $dotenv = new Dotenv\Dotenv(__DIR__.'/../');
 $dotenv->load();
-
 try {
 	require __DIR__.'/loadConfig.php';
 	require __DIR__.'/functions.php';
 	require __DIR__.'/database.php';
 	require __DIR__.'/middleware.php';
 	new Amet\Humblee\Bases\BaseRouter;
+	
 
 } catch (\Exception $e) {
 	global $config;
