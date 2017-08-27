@@ -1,0 +1,331 @@
+Aug 26 13:19:18 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255))  DEFAULT CHARSET=utf8;
+Aug 26 13:19:19 [info] CREATE UNIQUE INDEX `idx_schema_migrations_version` ON `schema_migrations`(`version`)
+Aug 26 13:19:20 [info] SELECT version FROM schema_migrations
+Aug 26 13:19:20 [info] SELECT version FROM schema_migrations
+Aug 26 13:19:20 [info] SELECT version FROM schema_migrations
+Aug 26 13:19:50 [info] SELECT version FROM schema_migrations
+Aug 26 13:19:50 [info] SELECT version FROM schema_migrations
+Aug 26 13:19:50 [info] SELECT version FROM schema_migrations
+Aug 26 13:19:50 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 26 13:19:50 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 26 13:21:54 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255))  DEFAULT CHARSET=utf8;
+Aug 26 13:21:54 [info] CREATE UNIQUE INDEX `idx_schema_migrations_version` ON `schema_migrations`(`version`)
+Aug 26 13:21:54 [info] SELECT version FROM schema_migrations
+Aug 26 13:21:54 [info] SELECT version FROM schema_migrations
+Aug 26 13:21:54 [info] SELECT version FROM schema_migrations
+Aug 26 13:21:54 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 26 13:21:54 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 26 13:23:18 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255))  DEFAULT CHARSET=utf8;
+Aug 26 13:23:19 [info] CREATE UNIQUE INDEX `idx_schema_migrations_version` ON `schema_migrations`(`version`)
+Aug 26 13:23:19 [info] SELECT version FROM schema_migrations
+Aug 26 13:23:19 [info] SELECT version FROM schema_migrations
+Aug 26 13:23:19 [info] SELECT version FROM schema_migrations
+Aug 26 13:23:19 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 26 13:23:19 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 26 13:23:45 [info] SELECT version FROM schema_migrations
+Aug 26 13:23:45 [info] SELECT version FROM schema_migrations
+Aug 26 13:23:45 [info] SELECT version FROM schema_migrations
+Aug 26 13:23:45 [info] DROP TABLE IF EXISTS `users`
+Aug 26 13:23:45 [info] DELETE FROM schema_migrations WHERE version = '20170826131526'
+Aug 26 13:24:50 [info] SELECT version FROM schema_migrations
+Aug 26 13:24:50 [info] SELECT version FROM schema_migrations
+Aug 26 13:24:50 [info] SELECT version FROM schema_migrations
+Aug 26 13:24:50 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(500),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 26 13:24:50 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 26 13:25:44 [info] SELECT version FROM schema_migrations
+Aug 26 13:25:44 [info] SELECT version FROM schema_migrations
+Aug 26 13:25:44 [info] SELECT version FROM schema_migrations
+Aug 26 13:25:44 [info] DROP TABLE IF EXISTS `users`
+Aug 26 13:25:44 [info] DELETE FROM schema_migrations WHERE version = '20170826131526'
+Aug 27 07:29:53 [info] SELECT version FROM schema_migrations
+Aug 27 07:29:53 [info] SELECT version FROM schema_migrations
+Aug 27 07:29:53 [info] SELECT version FROM schema_migrations
+Aug 27 07:29:53 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:29:53 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 27 07:30:59 [info] SELECT version FROM schema_migrations
+Aug 27 07:30:59 [info] SELECT version FROM schema_migrations
+Aug 27 07:30:59 [info] SELECT version FROM schema_migrations
+Aug 27 07:31:14 [info] SELECT version FROM schema_migrations
+Aug 27 07:31:14 [info] SELECT version FROM schema_migrations
+Aug 27 07:31:14 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:16 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:16 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:16 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:16 [info] CREATE TABLE `roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(100),
+`description` text,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:32:17 [info] INSERT INTO schema_migrations (version) VALUES ('20170827023216')
+Aug 27 07:32:20 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:20 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:20 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:47 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:47 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:47 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:51 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:51 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:51 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:53 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:53 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:53 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:56 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:56 [info] SELECT version FROM schema_migrations
+Aug 27 07:32:56 [info] SELECT version FROM schema_migrations
+Aug 27 07:33:21 [info] SELECT version FROM schema_migrations
+Aug 27 07:33:21 [info] SELECT version FROM schema_migrations
+Aug 27 07:33:21 [info] SELECT version FROM schema_migrations
+Aug 27 07:34:18 [info] SELECT version FROM schema_migrations
+Aug 27 07:34:18 [info] SELECT version FROM schema_migrations
+Aug 27 07:34:18 [info] SELECT version FROM schema_migrations
+Aug 27 07:34:51 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255))  DEFAULT CHARSET=utf8;
+Aug 27 07:34:51 [info] CREATE UNIQUE INDEX `idx_schema_migrations_version` ON `schema_migrations`(`version`)
+Aug 27 07:34:52 [info] SELECT version FROM schema_migrations
+Aug 27 07:34:52 [info] SELECT version FROM schema_migrations
+Aug 27 07:34:52 [info] SELECT version FROM schema_migrations
+Aug 27 07:34:52 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:34:52 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 27 07:34:52 [info] CREATE TABLE `roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(100),
+`description` text,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:34:52 [info] INSERT INTO schema_migrations (version) VALUES ('20170827023216')
+Aug 27 07:34:58 [info] SELECT version FROM schema_migrations
+Aug 27 07:34:58 [info] SELECT version FROM schema_migrations
+Aug 27 07:34:58 [info] SELECT version FROM schema_migrations
+Aug 27 07:36:39 [info] SELECT version FROM schema_migrations
+Aug 27 07:36:39 [info] SELECT version FROM schema_migrations
+Aug 27 07:36:39 [info] SELECT version FROM schema_migrations
+Aug 27 07:36:39 [info] DROP TABLE IF EXISTS `users`
+Aug 27 07:36:39 [info] DELETE FROM schema_migrations WHERE version = '20170826131526'
+Aug 27 07:36:59 [info] SELECT version FROM schema_migrations
+Aug 27 07:36:59 [info] SELECT version FROM schema_migrations
+Aug 27 07:36:59 [info] SELECT version FROM schema_migrations
+Aug 27 07:36:59 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:36:59 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 27 07:36:59 [info] CREATE TABLE `roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(100),
+`description` text,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:37:00 [info] INSERT INTO schema_migrations (version) VALUES ('20170827023216')
+Aug 27 07:37:50 [info] SELECT version FROM schema_migrations
+Aug 27 07:37:50 [info] SELECT version FROM schema_migrations
+Aug 27 07:37:50 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:22 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255))  DEFAULT CHARSET=utf8;
+Aug 27 07:39:22 [info] CREATE UNIQUE INDEX `idx_schema_migrations_version` ON `schema_migrations`(`version`)
+Aug 27 07:39:22 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:22 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:22 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:22 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:39:22 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 27 07:39:22 [info] INSERT INTO schema_migrations (version) VALUES ('20170827073834')
+Aug 27 07:39:28 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:28 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:28 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:40 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:40 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:40 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:40 [info] DROP TABLE IF EXISTS `roles`
+Aug 27 07:39:40 [info] DELETE FROM schema_migrations WHERE version = '20170827073834'
+Aug 27 07:39:40 [info] DROP TABLE IF EXISTS `users`
+Aug 27 07:39:40 [info] DELETE FROM schema_migrations WHERE version = '20170826131526'
+Aug 27 07:39:52 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:52 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:52 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:52 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:39:52 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 27 07:39:52 [info] INSERT INTO schema_migrations (version) VALUES ('20170827073834')
+Aug 27 07:39:55 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:55 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:55 [info] SELECT version FROM schema_migrations
+Aug 27 07:39:55 [info] DROP TABLE IF EXISTS `roles`
+Aug 27 07:39:55 [info] DELETE FROM schema_migrations WHERE version = '20170827073834'
+Aug 27 07:39:55 [info] DROP TABLE IF EXISTS `users`
+Aug 27 07:39:55 [info] DELETE FROM schema_migrations WHERE version = '20170826131526'
+Aug 27 07:40:33 [info] SELECT version FROM schema_migrations
+Aug 27 07:40:33 [info] SELECT version FROM schema_migrations
+Aug 27 07:40:33 [info] SELECT version FROM schema_migrations
+Aug 27 07:40:33 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:40:33 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 27 07:40:33 [info] CREATE TABLE `roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(100),
+`description` text,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:40:33 [info] INSERT INTO schema_migrations (version) VALUES ('20170827024033')
+Aug 27 07:40:49 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255))  DEFAULT CHARSET=utf8;
+Aug 27 07:40:49 [info] CREATE UNIQUE INDEX `idx_schema_migrations_version` ON `schema_migrations`(`version`)
+Aug 27 07:40:49 [info] SELECT version FROM schema_migrations
+Aug 27 07:40:49 [info] SELECT version FROM schema_migrations
+Aug 27 07:40:49 [info] SELECT version FROM schema_migrations
+Aug 27 07:40:49 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:40:50 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 27 07:40:50 [info] CREATE TABLE `roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(100),
+`description` text,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:40:50 [info] INSERT INTO schema_migrations (version) VALUES ('20170827024033')
+Aug 27 07:41:07 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:07 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:07 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:07 [info] CREATE TABLE `roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(100),
+`description` text,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:41:14 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:14 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:14 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:14 [info] CREATE TABLE `roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(100),
+`description` text,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:41:32 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255))  DEFAULT CHARSET=utf8;
+Aug 27 07:41:32 [info] CREATE UNIQUE INDEX `idx_schema_migrations_version` ON `schema_migrations`(`version`)
+Aug 27 07:41:32 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:32 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:32 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:32 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:41:32 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 27 07:41:32 [info] CREATE TABLE `roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(100),
+`description` text,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:41:33 [info] INSERT INTO schema_migrations (version) VALUES ('20170827024107')
+Aug 27 07:41:36 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:36 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:36 [info] SELECT version FROM schema_migrations
+Aug 27 07:41:36 [info] DROP TABLE IF EXISTS `roles`
+Aug 27 07:41:36 [info] DELETE FROM schema_migrations WHERE version = '20170827024107'
+Aug 27 07:41:36 [info] DROP TABLE IF EXISTS `users`
+Aug 27 07:41:36 [info] DELETE FROM schema_migrations WHERE version = '20170826131526'
+Aug 27 07:42:12 [info] SELECT version FROM schema_migrations
+Aug 27 07:42:12 [info] SELECT version FROM schema_migrations
+Aug 27 07:42:12 [info] SELECT version FROM schema_migrations
+Aug 27 07:42:12 [info] CREATE TABLE `users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`email` varchar(255),
+`password` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:42:12 [info] INSERT INTO schema_migrations (version) VALUES ('20170826131526')
+Aug 27 07:42:20 [info] SELECT version FROM schema_migrations
+Aug 27 07:42:20 [info] SELECT version FROM schema_migrations
+Aug 27 07:42:20 [info] SELECT version FROM schema_migrations
+Aug 27 07:42:20 [info] CREATE TABLE `roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(100),
+`description` text,
+ PRIMARY KEY (`id`))  DEFAULT CHARSET=utf8;
+Aug 27 07:42:21 [info] INSERT INTO schema_migrations (version) VALUES ('20170827024107')

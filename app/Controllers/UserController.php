@@ -18,9 +18,8 @@ class UserController extends BaseController{
 
 	public function employee()
 	{
-		$data = (new Employee)->set_show_column(['emp_no','first_name','last_name'])->find(["emp_no" => ['$gt' => 20000]],[
-				"limit" => 1000
-			]);
+		$data = (new Employee)->set_show_column(['emp_no','first_name','last_name'])->paginate([],[
+			],100);
 		$return = [
 			'success' => true,
 			'message' => "Data User Retrieved",

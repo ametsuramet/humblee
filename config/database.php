@@ -55,6 +55,7 @@ return array(
         )
 
     ),
+    'prefix' => '',
     'migrations_dir' => array('default' => __DIR__ .'/..' . '/migrations'),
     'db_dir' => __DIR__ .'/..' . DIRECTORY_SEPARATOR . 'db',
     'log_dir' => __DIR__ .'/..' . DIRECTORY_SEPARATOR . 'logs',
