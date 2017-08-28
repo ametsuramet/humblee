@@ -8,9 +8,19 @@ class SampleController extends BaseController{
 
 	public function index()
 	{
-		global $executionStartTime; 
+		global $executionStartTime;
 		$message = "Hello Suprb-Dev";
-		return view('sample',compact('message'));
+		$rq =  http_get('http://localhost:8000/api/v1/transactions',[],[
+			'headers' => [
+					'token' => session('token'),
+					'company-id' => '59a36434f826a053d455fb82'
+				],
+			]);
+		if ($rq->info->http_code == 200) {
+			print_r($rq->decoded_response);
+			
+		}
+		// return view('sample',compact('message'));
 	}	
 
 	public function auth_user()

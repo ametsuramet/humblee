@@ -64,20 +64,20 @@ use \Firebase\JWT\JWT;
 			}
 		}
 	}
-	// if (!function_exists('old')) {
-	// 	function old($key,$message = null)
-	// 	{
-	// 		$session_factory = new \Aura\Session\SessionFactory;
-	// 		$session = $session_factory->newInstance($_COOKIE);
-	// 		$session->setCookieParams(array('lifetime' => '10'));
-	// 		$segment = $session->getSegment('Amet\Humblee');
-	// 		if ($message) {
-	// 			$segment->set($key,$message);
-	// 		} else {
-	// 			return $segment->get($key,null);
-	// 		}
-	// 	}
-	// }
+	if (!function_exists('session')) {
+		function session($key,$message = null)
+		{
+			$session_factory = new \Aura\Session\SessionFactory;
+			$session = $session_factory->newInstance($_COOKIE);
+			$session->setCookieParams(array('lifetime' => '10'));
+			$segment = $session->getSegment('Amet\Humblee');
+			if ($message) {
+				$segment->set($key,$message);
+			} else {
+				return $segment->get($key,null);
+			}
+		}
+	}
 	if (!function_exists('request')) {
 		function request()
 		{
@@ -113,11 +113,12 @@ use \Firebase\JWT\JWT;
 	}
 
 	if (!function_exists('view_exception')) {
-		function view_exception($path, $data)
+		function view_exception($path, $data,$http_error_code = 403)
 		{
 			$pug    = new Pug\Pug();
 	        $vars   = $data ?: array();
 	        $output = $pug->render(__DIR__ . '/../vendor/ametsuramet/humblee-framework/src/resources/exceptions/' . $path . $pug->getExtension(), $vars);
+	        http_response_code($http_error_code);
 	        echo $output;
 		}
 	}
@@ -227,5 +228,41 @@ use \Firebase\JWT\JWT;
 			$id = $decoded->sub;
 			header('Location: '.url().$config['app']["redirect"]);
 			}
+		}
+	}
+	if (!function_exists('http_rest')) {
+		function http_rest($url, $parameters=[], $options=[]){
+			return new \Positivezero\RestClient($options);
+		}
+	}
+	if (!function_exists('http_get')) {
+		function http_get($url, $parameters=[], $options=[]){
+			$client = new \Positivezero\RestClient($options);
+			$client->register_decoder('html',"error_html");
+ 			return $client->get($url, $parameters);
+		}
+	}
+	if (!function_exists('http_post')) {
+		function http_post($url, $parameters=[], $options=[]){
+			$client = new \Positivezero\RestClient($options);
+ 			return $client->post($url, $parameters);
+		}
+	}
+	if (!function_exists('http_put')) {
+		function http_put($url, $parameters=[], $options=[]){
+			$client = new \Positivezero\RestClient($options);
+ 			return $client->put($url, $parameters);
+		}
+	}
+	if (!function_exists('http_delete')) {
+		function http_delete($url, $parameters=[], $options=[]){
+			$client = new \Positivezero\RestClient($options);
+ 			return $client->delete($url, $parameters);
+		}
+	}
+	if (!function_exists('error_html')) {
+		function error_html($data){
+			print_r($data);
+			die();
 		}
 	}

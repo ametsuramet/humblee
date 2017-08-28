@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ametsuramet/humblee-framework.git",
-                "reference": "436979e53c37bb95f4fcdecfda90253156623878"
+                "reference": "be33088140e511f6d34d5e23b026982f1d973cfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/436979e53c37bb95f4fcdecfda90253156623878",
-                "reference": "436979e53c37bb95f4fcdecfda90253156623878",
+                "url": "https://api.github.com/repos/ametsuramet/humblee-framework/zipball/be33088140e511f6d34d5e23b026982f1d973cfd",
+                "reference": "be33088140e511f6d34d5e23b026982f1d973cfd",
                 "shasum": ""
             },
             "require": {
@@ -31,6 +31,7 @@
                 "monolog/monolog": "^2.0@dev",
                 "php": ">=5.6.4",
                 "pmeth/php_repl": "dev-master",
+                "positivezero/rest": "dev-master",
                 "pug-php/pug": "dev-master",
                 "slim/pdo": "dev-master",
                 "swiftmailer/swiftmailer": "^6.0",
@@ -54,7 +55,7 @@
                 }
             ],
             "description": "Humblee Framework",
-            "time": "2017-08-26 12:07:03"
+            "time": "2017-08-28 05:17:49"
         },
         {
             "name": "aura/session",
@@ -518,12 +519,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "1c82af4f00688ba656b0f9d97de2eae75c41788c"
+                "reference": "e935ac3bcfa32a9d8b9a082e5085f233fa9cf918"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/1c82af4f00688ba656b0f9d97de2eae75c41788c",
-                "reference": "1c82af4f00688ba656b0f9d97de2eae75c41788c",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/e935ac3bcfa32a9d8b9a082e5085f233fa9cf918",
+                "reference": "e935ac3bcfa32a9d8b9a082e5085f233fa9cf918",
                 "shasum": ""
             },
             "require": {
@@ -554,7 +555,7 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2017-08-24 19:24:45"
+            "time": "2017-08-27 09:20:20"
         },
         {
             "name": "illuminate/hashing",
@@ -977,6 +978,60 @@
             ],
             "description": "A command line REPL (Read-Evaluate-Print-Loop) for PHP written in PHP.",
             "time": "2014-02-14 14:04:59"
+        },
+        {
+            "name": "positivezero/rest",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/positivezero/rest.git",
+                "reference": "45fa7180776c2300b54d0fe8d04737c924b60da6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/positivezero/rest/zipball/45fa7180776c2300b54d0fe8d04737c924b60da6",
+                "reference": "45fa7180776c2300b54d0fe8d04737c924b60da6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.6-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vojtěch Kijenský",
+                    "homepage": "http://www.positivezero.co.uk"
+                },
+                {
+                    "name": "Travis Dent",
+                    "email": "tcdent@gmail.com",
+                    "homepage": "https://github.com/tcdent/php-restclient"
+                }
+            ],
+            "description": "The REST PHP client",
+            "homepage": "https://github.com/positivezero/rest",
+            "keywords": [
+                "client",
+                "library",
+                "php",
+                "rest"
+            ],
+            "time": "2014-01-07 09:09:15"
         },
         {
             "name": "psr/container",
@@ -1555,12 +1610,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "bfa0d12066ac2339dae3bb0ade63ed38f2a93586"
+                "reference": "3008485c470725392c12cb82638436547534e67b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/bfa0d12066ac2339dae3bb0ade63ed38f2a93586",
-                "reference": "bfa0d12066ac2339dae3bb0ade63ed38f2a93586",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/3008485c470725392c12cb82638436547534e67b",
+                "reference": "3008485c470725392c12cb82638436547534e67b",
                 "shasum": ""
             },
             "require": {
@@ -1614,7 +1669,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-24 21:10:36"
+            "time": "2017-08-27 08:55:51"
         },
         {
             "name": "vlucas/phpdotenv",
