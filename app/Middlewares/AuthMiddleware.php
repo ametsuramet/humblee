@@ -11,9 +11,7 @@ class AuthMiddleware extends BaseMiddleware {
 
 	protected function handle()
 	{
-		// auth();
 		auth();
-		// print_r(auth());die();
 	}
 
 }

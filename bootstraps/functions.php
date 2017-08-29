@@ -71,6 +71,8 @@ use \Firebase\JWT\JWT;
 			$session = $session_factory->newInstance($_COOKIE);
 			$session->setCookieParams(array('lifetime' => '10'));
 			$segment = $session->getSegment('Amet\Humblee');
+			$segment->keepFlash();
+			
 			if ($message) {
 				$segment->set($key,$message);
 			} else {
@@ -101,6 +103,7 @@ use \Firebase\JWT\JWT;
 	if (!function_exists('view')) {
 		function view($path, $data)
 		{
+
 			$session_factory = new \Aura\Session\SessionFactory;
 			$session = $session_factory->newInstance($_COOKIE);
 			$csrf_value = $session->getCsrfToken()->getValue();
@@ -232,7 +235,9 @@ use \Firebase\JWT\JWT;
 	}
 	if (!function_exists('http_rest')) {
 		function http_rest($url, $parameters=[], $options=[]){
-			return new \Positivezero\RestClient($options);
+			$client = new \Positivezero\RestClient($options);
+			$client->register_decoder('html',"error_html");
+			return $client;
 		}
 	}
 	if (!function_exists('http_get')) {
@@ -245,18 +250,22 @@ use \Firebase\JWT\JWT;
 	if (!function_exists('http_post')) {
 		function http_post($url, $parameters=[], $options=[]){
 			$client = new \Positivezero\RestClient($options);
+			$client->register_decoder('html',"error_html");
+
  			return $client->post($url, $parameters);
 		}
 	}
 	if (!function_exists('http_put')) {
 		function http_put($url, $parameters=[], $options=[]){
 			$client = new \Positivezero\RestClient($options);
+			$client->register_decoder('html',"error_html");
  			return $client->put($url, $parameters);
 		}
 	}
 	if (!function_exists('http_delete')) {
 		function http_delete($url, $parameters=[], $options=[]){
 			$client = new \Positivezero\RestClient($options);
+			$client->register_decoder('html',"error_html");
  			return $client->delete($url, $parameters);
 		}
 	}

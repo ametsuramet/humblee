@@ -11,6 +11,13 @@ try {
 
 } catch (\Exception $e) {
 	global $config;
+	global $middleware_class;
+	if ($middleware_class == "App\Middlewares\JwtMiddleware") {
+		$success = false;
+		$message = $e->getMessage();
+		response(compact("success","message"), 200);
+		exit;
+	}
 	if ($config['app']['APP_ENV'] != "production" && $config['app']['APP_DEBUG'] != "false") {
 		$traces = $e->getTrace();
 		$message = $e->getMessage();
