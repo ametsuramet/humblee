@@ -57,6 +57,8 @@ use \Firebase\JWT\JWT;
 			$session_factory = new \Aura\Session\SessionFactory;
 			$session = $session_factory->newInstance($_COOKIE);
 			$segment = $session->getSegment('Amet\Humblee');
+			$segment->keepFlash();
+			
 			if ($message) {
 				$segment->setFlash($key,$message);
 			} else {
@@ -72,7 +74,7 @@ use \Firebase\JWT\JWT;
 			$session->setCookieParams(array('lifetime' => '10'));
 			$segment = $session->getSegment('Amet\Humblee');
 			$segment->keepFlash();
-			
+
 			if ($message) {
 				$segment->set($key,$message);
 			} else {
@@ -273,5 +275,11 @@ use \Firebase\JWT\JWT;
 		function error_html($data){
 			print_r($data);
 			die();
+		}
+	}
+
+	if (!function_exists('getOId')) {
+		function getOId($_id){
+			return $_id->{'$oid'};
 		}
 	}
