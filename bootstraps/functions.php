@@ -103,7 +103,7 @@ use \Firebase\JWT\JWT;
 		}
 	}
 	if (!function_exists('view')) {
-		function view($path, $data)
+		function view($path, $data, $return_data = false)
 		{
 
 			$session_factory = new \Aura\Session\SessionFactory;
@@ -113,17 +113,23 @@ use \Firebase\JWT\JWT;
 	        $vars   = $data ?: array();
 	        $vars["csrf_token"] = $csrf_value;
 	        $output = $pug->render(__DIR__ . '/../resources/views/' . $path . $pug->getExtension(), $vars);
+	        	if ($return_data) {
+	        		return $output;
+	        	}
 	        echo $output;
 		}
 	}
 
 	if (!function_exists('view_exception')) {
-		function view_exception($path, $data,$http_error_code = 403)
+		function view_exception($path, $data,$http_error_code = 403, $return_data = false)
 		{
 			$pug    = new Pug\Pug();
 	        $vars   = $data ?: array();
 	        $output = $pug->render(__DIR__ . '/../vendor/ametsuramet/humblee-framework/src/resources/exceptions/' . $path . $pug->getExtension(), $vars);
 	        http_response_code($http_error_code);
+	        if ($return_data) {
+	        		return $output;
+	        	}
 	        echo $output;
 		}
 	}
@@ -210,7 +216,12 @@ use \Firebase\JWT\JWT;
 			return $user->find($id);
 		}
 	}
-
+	if (!function_exists('redirect')) {
+		function redirect($url){
+			header('Location: '.$url);
+			exit;
+		}
+	}
 	if (!function_exists('redirect_guest')) {
 		function redirect_guest(){
 			global $config;
