@@ -294,3 +294,30 @@ use \Firebase\JWT\JWT;
 			return $_id->{'$oid'};
 		}
 	}
+
+	if (!function_exists('s3_put')) {
+		function s3_put($body,$path = null, $acl = 'public-read'){
+			global $config;
+
+			// $s3 = new \Aws\S3\S3Client([
+			//     'region'  => $config['s3']['region']
+			// ]);
+			$s3 = \Aws\S3\S3Client::factory(array(
+			    'key'    => $config['s3']['key'],
+			    'secret'    => $config['s3']['secret'],
+			    'region'  => $config['s3']['region'],
+			    'version' => "2006-03-01"
+			));
+			try {
+			    $s3->putObject([
+			        'Bucket' => $config['s3']['bucket'],
+			        'Body'   => $body,
+			        'Key'    => $path, 
+			        'ACL'    => $acl,
+			    ]);
+			    return true;
+			} catch (\Aws\S3\Exception\S3Exception $e) {
+			    return false;
+			}
+		}
+	}
